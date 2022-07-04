@@ -1,0 +1,165 @@
+html {
+  box-sizing: border-box;
+  position: relative;
+}
+
+*, *:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 400;
+  background-color: #fff;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, p, figure, fieldset {
+  margin: 0;
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 50px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.block-green {
+  max-width: 600px;
+  height: 20px;
+  border: 1px solid green;
+  margin: 0 auto 100px;
+}
+
+.block-green__fon {
+  display: block;
+  height: 18px;
+  max-width: 90%;
+  background-color: chartreuse;
+  animation: width-green 5s;
+}
+
+@keyframes width-green {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%
+  }
+}
+
+.block-orang {
+  height: 30px;
+  width: 100px;
+  margin-bottom: 100px;
+  background-color: orange;
+  animation: width-hover 3s infinite alternate;
+  animation-play-state: paused;
+}
+
+.block-orang:hover {
+  animation-play-state: running;
+}
+
+@keyframes width-hover {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.block-blue {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border: 1px solid blue;
+  position: relative;
+}
+
+.block-blue:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: darkblue;
+  animation: ball 5s infinite, ball-move 5s infinite;
+}
+
+.block-blue:hover:before {
+  animation-play-state: paused;
+}
+
+@keyframes ball {
+  0% {
+    top: 0;
+  }
+  15% {
+    top: calc(100% - 7px);
+    width: 12px;
+    height: 7px;
+  }
+  30% {
+    top: 119px;
+    width: 10px;
+    height: 10px;
+  }
+  45% {
+    top: calc(100% - 7px);
+    width: 12px;
+    height: 7px;
+  }
+  60% {
+    top: 129px;
+    width: 10px;
+    height: 10px;
+  }
+  75% {
+    top: calc(100% - 10px);
+  }
+  100% {
+    top: calc(100% - 10px);
+  }
+}
+
+@keyframes ball-move {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 10px);
+  }
+}
