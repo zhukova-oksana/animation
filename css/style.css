@@ -128,9 +128,9 @@ main {
     top: 0;
   }
   15% {
-    top: calc(100% - 7px);
+    top: calc(100% - 9px);
     width: 12px;
-    height: 7px;
+    height: 9px;
   }
   30% {
     top: 119px;
@@ -138,9 +138,9 @@ main {
     height: 10px;
   }
   45% {
-    top: calc(100% - 7px);
+    top: calc(100% - 9px);
     width: 12px;
-    height: 7px;
+    height: 9px;
   }
   60% {
     top: 129px;
